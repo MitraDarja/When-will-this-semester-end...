@@ -43,6 +43,7 @@ void OpenAddMap::hash(unsigned &iteration, unsigned &key, unsigned const &value)
             if (iteration > table_size)
             {
                 resize_table(true);
+                iteration = 0;
                 key = value % table_size;
             }
             else
